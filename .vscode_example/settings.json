@@ -1,0 +1,20 @@
+{
+  "mocha.files.glob": "./test/**/*.ts",
+  "mochaExplorer.files": "test/**/*.ts",
+  "mochaExplorer.require": ["ts-node/register", "tsconfig-paths/register"],
+  "mochaExplorer.timeout": 3000,
+  "mochaExplorer.logpanel": true,
+  "mochaExplorer.envPath": "docker/local/ghost/.env.test",
+  "files.trimTrailingWhitespace": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "terminal.integrated.scrollback": 10000,
+  "cSpell.words": [],
+  "github-actions.workflows.pinned.workflows": []
+}

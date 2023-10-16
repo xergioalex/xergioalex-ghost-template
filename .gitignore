@@ -26,3 +26,10 @@ dist/
 config.json
 changelog.md
 changelog.md.bk
+
+# Editors
+.vscode
+.devcontainer
+coverage/
+.env
+.env.test

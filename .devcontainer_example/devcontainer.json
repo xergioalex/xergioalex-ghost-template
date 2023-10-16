@@ -1,0 +1,29 @@
+{
+  "name": "Ghost - NodeJs & TypeScript & Serverless",
+  "dockerComposeFile": "../docker/local/docker-compose.yml",
+  "service": "ghost_vscode",
+  "workspaceFolder": "/home/node/app",
+  "runServices": ["ghost_vscode"],
+  "customizations": {
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "vscode": {
+      "extensions": [
+        "VisualStudioExptTeam.vscodeintellicode",
+        "eamodio.gitlens",
+        "vscode-icons-team.vscode-icons",
+        "shardulm94.trailing-spaces",
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "dbaeumer.vscode-eslint",
+        "GitHub.copilot",
+        "EditorConfig.EditorConfig",
+        "compulim.vscode-mocha",
+        "hbenl.vscode-mocha-test-adapter",
+        "GitHub.vscode-github-actions",
+        "fabiospampinato.vscode-terminals"
+      ]
+    }
+  }
+}

@@ -10,6 +10,7 @@
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",
+        "build": "gulp zip && mv dist/source.zip dist/source-custom.zip",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",

@@ -1,0 +1,41 @@
+version: '3.8'
+
+volumes:
+  vscode_ssh: {}
+  dynamodb_data_test: {}
+  localstack_data: {}
+
+services:
+  ghost: &ghost
+    build:
+      context: .
+      dockerfile: ./ghost/Dockerfile
+      args:
+        AWS_CLI_LINUX_TARGET: ${AWS_CLI_LINUX_TARGET}
+    working_dir: /home/node/app
+    volumes:
+      - ../../:/home/node/app
+      - vscode_ssh:/root/.ssh
+    env_file:
+      - ghost/.env
+    networks:
+      - ghost
+
+  ghost_vscode:
+    <<: *ghost
+    command:
+      - /bin/sh
+      - -c
+      - |
+        sh app.config.sh
+        npm install
+        sleep infinity
+    ports:
+      - '3150:3000'
+    networks:
+      - ghost
+
+networks:
+  ghost:
+    external:
+      name: ghost-network

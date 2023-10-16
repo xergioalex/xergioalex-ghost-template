@@ -1,0 +1,6 @@
+{
+  "autorun": false,
+  "autokill": true,
+  "env": { "name": "value" },
+  "terminals": []
+}

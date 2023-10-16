@@ -78,6 +78,7 @@ function zipper(done) {
             '**',
             '!node_modules', '!node_modules/**',
             '!dist', '!dist/**',
+            '!docker', '!docker/**',
             '!yarn-error.log',
             '!yarn.lock',
             '!gulpfile.js'
